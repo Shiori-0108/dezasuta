@@ -111,18 +111,18 @@ img {
 @media screen and (max-width: 767px) {
     /*画面サイズ 499px以下になったらここに書いてあるcssが適用される*/
 
-    .wrap3 .wrap3 ul,
+    .wrap3,
+    .wrap3 ul,
     {
     display: block;
     padding-bottom: 10px;
-    border-right: none;
-    margin: 10px;
-
 }
 
 .wrap3 li {
     border-right: none;
-    padding: 20px 0px;
+    flex-direction: column;
+    /*要素を縦に並べる*/
+    padding: 0 20px;
     border-bottom: 2px solid #333;
 
 }
