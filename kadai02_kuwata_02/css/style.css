@@ -98,6 +98,7 @@ img {
 .wrap3 li {
     padding: 0 20px;
     /* メニューとボーダー線の間の距離感 */
+    border-left: none;
 }
 
 .wrap3 li+li {
@@ -112,18 +113,20 @@ img {
     /*画面サイズ 499px以下になったらここに書いてあるcssが適用される*/
 
     .wrap3,
-    .wrap3 ul,
-    {
-    display: block;
-    padding-bottom: 10px;
-}
+    .wrap3 ul {
+        display: block;
+        margin: 0 10px;
+    }
 
-.wrap3 li {
-    border-right: none;
-    flex-direction: column;
-    /*要素を縦に並べる*/
-    padding: 0 20px;
-    border-bottom: 2px solid #333;
+    .wrap3 li {
+        flex-direction: column;
+        /*要素を縦に並べる*/
+        padding: 20px 0;
+        border-bottom: 2px solid #333;
+        border-left: 0px;
+    }
 
-}
+    .wrap3 li+li {
+        border-left: none;
+    }
 }
