@@ -47,22 +47,15 @@ img {
 
 
 
-/* ここからwork1 */
-
-/* for(var i=1; i <=10; i ++) {
-    console.log(i);
-}
- */
-
 
 /* 
 ここからwork2
 
-
-
 .wrap li {
     list-style: none;
 } */
+/* 
+色は#008080か#20B2AAが近そう */
 
 body {
     background-color: #eeeeee;
@@ -80,14 +73,14 @@ body {
 
 h1 {
     text-align: center;
-    margin: 50px;
-    color: blue;
+    margin: 20px 0;
+    color: #008080;
 }
 
 h2 {
-    color: blue;
+    color: #008080;
     margin: 10px;
-    border-left: 8px solid blue;
+    border-left: 8px solid #008080;
     padding-left: 5px;
 }
 
@@ -96,11 +89,13 @@ h2 {
     background-color: #ffffff;
     justify-content: space-between;
     margin: 0 20px;
+    width: 33%;
 }
 
 .img {
     width: 100%;
     /* bodyの幅に対する割合 */
+
 }
 
 p {
@@ -111,16 +106,21 @@ p {
 
 @media screen and (max-width: 400px) {
 
+    body {
+        width: 100%;
+    }
+
     .img {
         width: 100%;
-        /* bodyの幅に対する割合 */
-        justify-content: center;
+        /* bodyの幅に対する割合
+        justify-content: center; */
     }
 
     .wrap {
+        /* max-width: 400px; */
         display: block;
-        /* flex-direction: column;
-        要素を縦に並べる */
+        flex-direction: column;
+        要素を縦に並べる
     }
 
     .wrap div {
