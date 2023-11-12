@@ -59,7 +59,6 @@ img {
 
 body {
     background-color: #eeeeee;
-
     list-style: none;
 }
 
@@ -67,7 +66,6 @@ body {
     max-width: 960px;
     margin: 0 auto;
 }
-
 
 .wrap {
     display: flex;
