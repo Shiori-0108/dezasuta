@@ -59,16 +59,19 @@ img {
 
 body {
     background-color: #eeeeee;
-    max-width: 960PX;
-    margin: 0 auto;
+
     list-style: none;
 }
 
+.service {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
 .wrap {
     display: flex;
-    /* list-style: none;
-    max-width: 960px; */
-    margin: 0 20px;
+    justify-content: space-between;
 }
 
 h1 {
@@ -85,22 +88,19 @@ h2 {
 }
 
 
-.wrap div {
+.wrap li {
     background-color: #ffffff;
-    justify-content: space-between;
-    margin: 0 20px;
-    width: 33%;
+    width: 32%;
 }
 
-.img {
+img {
     width: 100%;
     /* bodyの幅に対する割合 */
-
 }
 
 p {
     font-size: 15px;
-    margin: 5px;
+    padding: 0 5px 5px 5px;
 }
 
 
@@ -110,7 +110,7 @@ p {
         width: 100%;
     }
 
-    .img {
+    img {
         width: 100%;
         /* bodyの幅に対する割合
         justify-content: center; */
@@ -124,7 +124,7 @@ p {
         justify-content: center;
     }
 
-    .wrap div {
+    .wrap li {
         width: 100%;
         margin-bottom: 30px;
     }
