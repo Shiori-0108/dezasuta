@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4f260b;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* すべて */
+main {
+    background: #e8d9bf;
+}
+
+body {
+    display: block;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* div {
+    /* display: block; */
+/* max-width: ; */
+}
+
+section {
+    padding-top: 100px;
+}
+
+/* ヘッダー */
+
+.header_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 7% 0 3%;
+}
+
+.header_logo {
+    width: 226px;
+}
+
+.pc_nav ul {
+    display: flex;
+}
+
+.pc_nav ul li {
+    width: 105px;
+    margin-left: 55px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+
+
+/* メイン */
+
+/* 
+.container {
+    display: flex;
+    justify-content: center;
+} */
+
+.lead {
+    text-align: center;
+    padding: 100px 0 0 0;
+}
+
+.lead p:first-child {
+    font-size: 30px;
+    margin-bottom: 48px;
+}
+
+.lead p:nth-child(2) {
+    margin-bottom: 30px;
+    font-size: 82px;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+}
+
+.lead p:last-child {
+    font-size: 23px;
+    line-height: 1.65;
+    letter-spacing: 0.1em;
+}
+
+/* ABOUT */
+.about {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-top: 0;
+}
+
+.about_img img {
+    max-width: 50%;
+    border-bottom-right-radius: 65px;
+}
+
+.about_text {
+    width: 50%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.about_catch {
+    margin-bottom: 20px;
+    font-size: 44px;
+    font-weight: normal;
+    line-height: 1.38;
+}
+
+.about_desc {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about_text h2 {
+    width: 272px;
+    margin: 0 auto 45px 0;
+    padding-top: 56px;
+}
+
+/* メニュー */
+.menu {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.menu_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_item {
+    width: 30%;
+}
+
+.menu_item img {
+    width: 100%;
+    border-top-right-radius: 65px;
+}
+
+
+
+/* フッター */
+
+.footer_block {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto 70px;
+}
+
+.footer_img {
+    width: 300px;
+}
+
+.footer_block p {
+    color: #000000;
+    font-size: 20px;
+}
+
+.footer_copy {
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+}
+
+/* 
+.pagetop {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 125px;
+} */
