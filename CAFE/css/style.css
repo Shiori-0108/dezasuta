@@ -46,6 +46,9 @@ img {
     border: none;
 }
 
+/* 
+リセットCSSここまで */
+
 /* すべて */
 main {
     background: #e8d9bf;
@@ -70,7 +73,6 @@ div {
 section {
     padding-top: 100px;
 }
-
 
 section h2 {
     margin: 0 auto 40px;
@@ -121,7 +123,7 @@ h2 {
 
 
 
-/* メイン */
+/* main */
 
 /* 
 .container {
@@ -164,7 +166,9 @@ h2 {
 }
 
 .about_img {
-    max-width: 50%;
+    width: 50%;
+    object-fit: cover;
+    /* この一行を追加するだけ！ */
 }
 
 .about_img img {
@@ -195,12 +199,20 @@ h2 {
     padding-top: 56px;
 }
 
-/* メニュー */
+/* MENU */
 .menu {
     max-width: 1000px;
     margin: 0 auto;
     padding-right: 10px;
     padding-left: 10px;
+}
+
+.menu h2 {
+    width: 151%;
+}
+
+section h2 {
+    margin: 0 auto 40px;
 }
 
 .menu_block {
@@ -215,10 +227,6 @@ h2 {
 .menu_item img {
     width: 100%;
     border-top-right-radius: 65px;
-}
-
-.menu h2 {
-    width: 151%;
 }
 
 .menu_item h3 {
@@ -249,10 +257,6 @@ h2 {
     display: flex;
 }
 
-.gallery_img {
-    display: flex;
-}
-
 /* event */
 .event {
     max-width: 1000px;
@@ -278,9 +282,6 @@ h2 {
     line-height: 1;
 }
 
-ul {
-    list-style: none;
-}
 
 .event_block ul li+li {
     margin-top: 20px;
@@ -292,13 +293,17 @@ ul {
     width: 213px;
 }
 
-.access_map iframe {
+/* .access_map iframe {
     display: block;
     width: 100%;
     height: 470px;
-}
+} */
 
 /* フッター */
+
+footer {
+    padding: 76px 0 76px 0;
+}
 
 .footer_block {
     display: flex;
@@ -307,12 +312,15 @@ ul {
 }
 
 .footer_img {
-    width: 300px;
+    width: 226px;
+    margin-right: 60px;
+    margin-left: 10px;
 }
 
 .footer_block p {
     color: #000000;
     font-size: 20px;
+    line-height: 1.95;
 }
 
 .footer_copy {
