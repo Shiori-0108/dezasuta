@@ -21,6 +21,11 @@ li {
     /*デフォルトの文字色、font-familyを予め当てておく*/
     color: #4f260b;
     font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-feature-settings: "palt";
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 a {
@@ -54,21 +59,6 @@ main {
     background: #e8d9bf;
 }
 
-body {
-    display: block;
-}
-
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-div {
-    display: block;
-}
 
 section {
     padding-top: 100px;
@@ -172,7 +162,7 @@ h2 {
 }
 
 .about_img img {
-    border-bottom-right-radius: 65px;
+    border-bottom-right-radius: 80px;
 }
 
 .about_text {
@@ -208,7 +198,7 @@ h2 {
 }
 
 .menu h2 {
-    width: 151%;
+    width: 151px;
 }
 
 section h2 {
@@ -226,7 +216,7 @@ section h2 {
 
 .menu_item img {
     width: 100%;
-    border-top-right-radius: 65px;
+    border-top-right-radius: 40px;
 }
 
 .menu_item h3 {
@@ -282,9 +272,16 @@ section h2 {
     line-height: 1;
 }
 
+.event_block ul li time {
+    margin-right: 50px;
+}
 
 .event_block ul li+li {
     margin-top: 20px;
+}
+
+.event_block ul li a {
+    text-decoration: underline;
 }
 
 /* 
@@ -293,16 +290,16 @@ section h2 {
     width: 213px;
 }
 
-/* .access_map iframe {
+.access iframe {
     display: block;
     width: 100%;
     height: 470px;
-} */
+}
 
 /* フッター */
 
 footer {
-    padding: 76px 0 76px 0;
+    padding: 76px 0;
 }
 
 .footer_block {
@@ -313,7 +310,7 @@ footer {
 
 .footer_img {
     width: 226px;
-    margin-right: 60px;
+    margin-right: 65px;
     margin-left: 10px;
 }
 
@@ -323,17 +320,9 @@ footer {
     line-height: 1.95;
 }
 
-.footer_copy {
+.footer_copy p {
     text-align: center;
     color: #000000;
-}
-
-
-.page_top {
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    width: 125px;
 }
 
 a {
@@ -346,6 +335,15 @@ a:hover {
     opacity: 0.5;
 }
 
+/* 
+ページトップアイコン */
 .page_top img {
     width: 100%;
+}
+
+.page_top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 125px;
 }
