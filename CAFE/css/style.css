@@ -325,16 +325,6 @@ footer {
     color: #000000;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: 0.3s;
-}
-
-a:hover {
-    opacity: 0.5;
-}
-
 /* 
 ページトップアイコン */
 .page_top img {
