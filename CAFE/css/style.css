@@ -237,6 +237,31 @@ h2 {
 
 
 
+/* スライダー調整 */
+.slick-dots {
+    bottom: 20px;
+}
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: #fff;
+    font-size: 14px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #000 !important;
+}
+
+
 /* main */
 .lead {
     text-align: center;
@@ -649,7 +674,6 @@ footer {
 .footer_block {
     display: flex;
     max-width: 1000px;
-    /* margin: 0 auto 70px; */
 }
 
 .footer_img {
