@@ -41,7 +41,7 @@
                     <ul>
                         <li><a href="#about">ABOUT US</a></li>
                         <li><a href="#menu">MENU</a></li>
-                        <li><a href="#gallely">GALLERY</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
                         <li><a href="#event">EVENT</a></li>
                         <li><a href="#access">ACCESS</a></li>
                     </ul>
@@ -51,7 +51,7 @@
                     <ul>
                         <li><a href="#about">ABOUT US</a></li>
                         <li><a href="#menu">MENU</a></li>
-                        <li><a href="#gallely">GALLERY</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
                         <li><a href="#event">EVENT</a></li>
                         <li><a href="#access">ACCESS</a></li>
                     </ul>
@@ -110,25 +110,26 @@
 
 
             </section>
-            <section id="gallely" class="gallery">
+            <section id="gallery" class="gallery">
                 <h2>
                     <img src="images/gallery@2x.png" alt="GALLERY">
 
                 </h2>
-                <div class=".gallery_slider">
-                    <ul class="gallely_img">
-                        <li><a href="images/pc_gallary_01-100.jpg" data-lightbox="カフェラテ" data-title="カフェラテ"><img
-                                    src="images/pc_gallary_01-100.jpg"></a></li>
-                        <li><a href="images/pc_gallary_02-100.jpg" data-lightbox="看板" data-title="看板"><img
-                                    src="images/pc_gallary_02-100.jpg"></a></li>
-                        <li><a href="images/pc_gallary_03-100.jpg" data-lightbox="店内写真" data-title="店内写真"><img
-                                    src="images/pc_gallary_03-100.jpg"></a></li>
-                        <li><a href="images/pc_gallary_04-100.jpg" data-lightbox="コーヒー豆" data-title="コーヒー豆"><img
-                                    src="images/pc_gallary_04-100.jpg"></a></li>
-                        <li><a href="images/pc_gallary_05-100.jpg" data-lightbox="店内写真" data-title="店内写真"><img
-                                    src="images/pc_gallary_05-100.jpg"></a></li>
-                    </ul>
-                </div>
+
+                <ul class="gallery_img">
+                    <li><a href="images/pc_gallary_01-100.jpg" data-lightbox="group" data-title="カフェラテ"><img
+                                src="images/pc_gallary_01-100.jpg" alt="カフェラテ"></a></li>
+                    <li><a href="images/pc_gallary_02-100.jpg" data-lightbox="group" data-title="看板"><img
+                                src="images/pc_gallary_02-100.jpg" alt="看板"></a></li>
+                    <li><a href="images/pc_gallary_03-100.jpg" data-lightbox="group" data-title="店内写真"><img
+                                src="images/pc_gallary_03-100.jpg" alt="店内写真"></a></li>
+                    <li><a href="images/pc_gallary_04-100.jpg" data-lightbox="group" data-title="コーヒー豆"><img
+                                src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></a></li>
+                    <li><a href="images/pc_gallary_05-100.jpg" data-lightbox="group" data-title="店内写真"><img
+                                src="images/pc_gallary_05-100.jpg" alt="店内写真"></a></li>
+                    <li><a href="images/pc_gallary_05-100.jpg" data-lightbox="group" data-title="店内写真"><img
+                                src="images/pc_gallary_05-100.jpg" alt="店内写真"></a></li>
+                </ul>
             </section>
 
 
@@ -199,34 +200,20 @@
                 arrows: false,
             });
 
-            // $('.gallery_slider').slick({
-            //     dots: true,
-            //     infinite: true,
-            //     speed: 500,
-            //     slidesToShow: 3,
-            //     slidesToScroll: 1,
-            //     autoplay: true,
-            //     autoplaySpeed: 2000
-            // });
-
-            $('.gallery_slider').slick({
-                dots: true,
-                infinite: false,
+            $('.gallery_img').slick({
                 speed: 300,
                 slidesToShow: 5,
                 slidesToScroll: 1,
-                arrows: false,
                 responsive: [
                     {
                         breakpoint: 768,
                         settings: {
                             slidesToShow: 1,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            dots: true
                         }
+                    }
                 ]
             });
+        });
 
     </script>
 
