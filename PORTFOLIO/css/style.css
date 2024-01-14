@@ -1,0 +1,170 @@
+h1 {
+    font-family: "futura-pt", sans-serif;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    border: none;
+}
+
+
+
+.top_title {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    letter-spacing: 0.08em;
+    font-size: 40px;
+    font-family: "homemade-apple-pro", sans-serif;
+    width: 100%;
+}
+
+
+
+/* アバウト */
+.about {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0 100px;
+}
+
+.about_img {
+    width: 480px;
+    height: auto;
+}
+
+.about_text {
+    width: 41%;
+    margin-top: 50px;
+    padding-right: 95px;
+    padding-left: 48px;
+}
+
+.about p {
+    font-size: 18px;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: normal;
+    line-height: 1.7;
+    letter-spacing: 0.040em;
+    /* pxに直すなら18×0.040=o.72px */
+
+}
+
+/* サービス */
+
+.service {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* padding-right: 10px;
+    padding-left: 10px; */
+}
+
+.service_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service_menu {
+    position: relative;
+    width: 45%;
+}
+
+.service_text {
+    border-bottom: 1px solid #afb6b3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.service p {
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    font-weight: medium;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ワークス */
+/* .works_ {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.top_works {
+    display: flex;
+    justify-content: center;
+}
+
+.works img {
+    max-width: 25%;
+    margin: 0 30px;
+}
+
+
+.page_top {
+    position: fixed;
+    right: 80px;
+    /* 原理不明で確認する */
+    bottom: 40px;
+    /* width: 125px; */
+
+}
+
+/* コンタクト */
+.contact_message {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.contact p {
+    font-family: "yu-gothic", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: medium;
+
+}
+
+/* サンクスページ */
+.thanks_top {
+    font-family: "yu-gothic", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+.thanks_message {
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    font-weight: medium;
+}

@@ -1,0 +1,136 @@
+/* ABOUT */
+.about {
+    max-width: 1000px;
+}
+
+.about_profile {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-top: 0;
+}
+
+.about_top {
+    position: relative;
+}
+
+.about_top p {
+    position: absolute;
+    /*絶対配置*/
+    color: #333e33;
+    font-size: 16px;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: normal;
+    line-height: 1.75;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+.about_img {
+    width: 100%;
+
+}
+
+ここからCAFEサイト .about_text {
+    width: 41%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+
+.about_title {
+    font-size: 12px;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+.about_name {
+    font-size: 24px;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: normal;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.about_information {
+    font-size: 14px;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 57px;
+}
+
+
+.about_skill {
+    font-size: 16px;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: normal;
+    line-height: 1.75;
+    margin-bottom: 82px;
+}
+
+/* ABOUT HISTORY */
+ul {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 110px;
+}
+
+li {
+    display: flex;
+}
+
+li>div {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+li>div::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    content: "";
+    width: 22px;
+    height: 22px;
+    border-radius: 99rem;
+    background: #384842;
+}
+
+li>div {
+    width: 12%;
+    border-right: 1px solid #000;
+}
+
+li>p {
+    width: 88%;
+    padding-left: 60px;
+}
+
+/* .about_history {
+    margin-bottom: 110px;
+} */
+
+
+/* FAVORITE */
+.favorite_block {
+    display: flex;
+    justify-content: center;
+}
+
+.favorite_menu {
+    display: flex;
+    justify-content: center;
+
+}
