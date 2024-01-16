@@ -1,16 +1,8 @@
 /* ABOUT */
 .about {
     max-width: 1000px;
-}
-
-.about_profile {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1000px;
     margin: 0 auto;
-    margin-top: 100px;
-    padding-top: 0;
+    謎の隙間の原因解明できず究明中
 }
 
 .about_top {
@@ -32,15 +24,36 @@
     transform: translate(-50%, -50%);
     margin: 0;
     padding: 0;
+    background-color: white;
+    max-width: 710px;
+    /* ここのサイズ感直す、わからず途中 */
+    opacity: 0.8;
+    padding: 80px 100px;
 }
+
+.about_all {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .about_profile {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding-top: 0;
+} */
 
 .about_img {
-    width: 100%;
-
+    width: 540px;
+    height: auto;
 }
 
-ここからCAFEサイト .about_text {
-    width: 41%;
+.about_text {
+    width: 300px;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -83,6 +96,7 @@
 ul {
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 80px;
     margin-bottom: 110px;
 }
 
@@ -111,11 +125,15 @@ li>div::after {
 li>div {
     width: 12%;
     border-right: 1px solid #000;
+    font-family: "yu-gothic-pr6n", sans-serif;
 }
 
 li>p {
     width: 88%;
     padding-left: 60px;
+    font-size: 16px;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    line-height: 1.75;
 }
 
 /* .about_history {
@@ -125,6 +143,8 @@ li>p {
 
 /* FAVORITE */
 .favorite_block {
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
 }
