@@ -18,6 +18,7 @@ img {
 }
 
 
+/* メインビジュアル */
 
 .top_title {
     position: absolute;
@@ -58,9 +59,11 @@ img {
     line-height: 1.7;
     letter-spacing: 0.040em;
     /* pxに直すなら18×0.040=o.72px */
-
 }
 
+.about_space {
+    margin: 30px;
+}
 
 .about_btn {
     display: block;
@@ -74,6 +77,8 @@ img {
     font-size: 16px;
     background-color: #384842;
     text-align: center;
+    line-height: 3;
+    padding: 10px 0;
     /* ★vertical-align: baseline;これはきっと違うかった */
 }
 
@@ -169,7 +174,9 @@ img {
     font-size: 16px;
     background-color: #384842;
     text-align: center;
-    /* ★vertical-align: baseline;これはきっと違うかった */
+    line-height: 3;
+    padding: 10px 0;
+    margin-top: 100px;
 }
 
 /* コンタクト */
@@ -182,12 +189,14 @@ img {
     text-align: center;
     margin: 0 auto;
     font-size: 14px;
+    margin-bottom: 45px;
 }
 
 .contact p {
     font-family: "yu-gothic", sans-serif;
     font-size: 14px;
     line-height: 1.4;
+    /* 20/14で計算 */
     font-weight: medium;
 
 }

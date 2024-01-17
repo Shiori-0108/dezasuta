@@ -34,7 +34,6 @@
 .about_all {
     max-width: 1000px;
     margin: 0 auto;
-    /* position: relative; */
     display: flex;
     justify-content: space-between;
 }
@@ -50,6 +49,7 @@
 .about_img {
     width: 540px;
     height: auto;
+    display: block;
 }
 
 .about_text {
@@ -58,38 +58,41 @@
     padding-left: 10px;
 }
 
+.about_top p {
+    text-align: center;
+}
 
+.about_all p {
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: normal;
+}
 
 .about_title {
     font-size: 12px;
-    font-family: "yu-gothic-pr6n", sans-serif;
-    font-weight: normal;
     line-height: 1.7;
 }
 
 .about_name {
     font-size: 24px;
-    font-family: "yu-gothic-pr6n", sans-serif;
-    font-weight: normal;
     line-height: 1.25;
     margin-bottom: 25px;
 }
 
 .about_information {
     font-size: 14px;
-    font-family: "yu-gothic-pr6n", sans-serif;
-    font-weight: normal;
     line-height: 1.6;
     margin-bottom: 57px;
 }
 
-
 .about_skill {
     font-size: 16px;
-    font-family: "yu-gothic-pr6n", sans-serif;
-    font-weight: normal;
     line-height: 1.75;
     margin-bottom: 82px;
+}
+
+.skill_menu {
+    border-left: 1px solid #afb6b3;
+    padding: 25px;
 }
 
 /* ABOUT HISTORY */
@@ -150,6 +153,8 @@ li>p {
 }
 
 .favorite_menu {
+    /* max-width: 1000px;
+    margin: 0 auto; */
     display: flex;
     justify-content: center;
 
