@@ -1,1 +1,9 @@
-{/* <link rel="stylesheet" href="https://use.typekit.net/xbl5qai.css"></link> */}
+$(function () {
+    
+    //ハンバーガー
+    $(".sp_btn, .sp_nav li").on('click', function () {
+        $('.sp_nav').fadeToggle();
+        $('.sp_btn').toggleClass('open');
+    });
+
+});

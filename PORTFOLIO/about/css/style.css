@@ -7,6 +7,8 @@
 
 .about_top {
     position: relative;
+    max-width: 975px;
+    margin: 0 auto;
 }
 
 .about_top p {
@@ -25,10 +27,11 @@
     margin: 0;
     padding: 0;
     background-color: white;
-    max-width: 710px;
-    /* ここのサイズ感直す、わからず途中 */
+    width: 73%;
+    box-sizing: border-box;
     opacity: 0.8;
-    padding: 80px 100px;
+    padding: 8% 10%;
+
 }
 
 .about_all {
@@ -58,7 +61,6 @@
     width: 300px;
     padding-right: 10px;
     padding-left: 10px;
-    /* あとはこれを写真に対して真ん中に */
 }
 
 .about_text p {
@@ -101,15 +103,79 @@
     line-height: 1.75;
 }
 
-.about_skill p {
-    /* あとはここを下に下ろしたい */
+@media screen and (max-width: 767px) {
+
+    .about_img {
+        width: 230px;
+        height: auto;
+        display: block;
+    }
+
+
+    .about_text {
+        width: 300px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .about_text p {
+        text-align: start;
+    }
+
+    .about_top p {
+        text-align: center;
+    }
+
+    .about_all p {
+        font-family: "yu-gothic-pr6n", sans-serif;
+        font-weight: normal;
+    }
+
+    .about_title {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .about_name {
+        font-size: 24px;
+        line-height: 1.25;
+        margin-bottom: 25px;
+    }
+
+    .about_information {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 57px;
+    }
+
+    .about_skill_all {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about_skill {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .skill_menu {
+        border-top: 1px solid #afb6b3;
+        border-left: none;
+        padding: 25px;
+        line-height: 1.75;
+    }
 }
+
+
 
 .skill_menu {
     border-left: 1px solid #afb6b3;
-    padding: 25px;
+    /* border-top: none; */
+    おかしくなってしまった padding: 25px;
     line-height: 1.75;
 }
+
+
 
 /* ABOUT HISTORY */
 ul {
@@ -127,6 +193,7 @@ li>div {
     position: relative;
     display: flex;
     align-items: center;
+    padding: 25px;
 }
 
 li>div::after {
@@ -159,6 +226,11 @@ li>p {
 
 
 /* FAVORITE */
+.favorite h2 {
+    padding: 0;
+    text-align: center;
+}
+
 .favorite_block {
     padding-top: 0px;
 }
