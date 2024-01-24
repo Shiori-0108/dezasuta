@@ -88,6 +88,24 @@ section {
     display: none;
 }
 
+@media screen and (max-width: 767px) {
+
+    .nav {
+        position: fixed;
+        top: 0;
+        background: #384842;
+        width: 100%;
+        height: 75px;
+    }
+
+    /* 
+    .header_logo {
+        width: 187px;
+    } */
+
+}
+
+
 /* ハンバーガー */
 .sp_btn {
     position: fixed;
@@ -188,9 +206,10 @@ section {
 }
 
 .nav_text {
-    position: fixed;
+    position: absolute;
     top: 100px;
-    right: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     writing-mode: vertical-rl;
     font-size: 16px;
     font-family: "yu-gothic", sans-serif;
@@ -208,11 +227,37 @@ section {
     /* float: left; */
 }
 
+/* .page_top {
+    font-size: 16px;} */
+
+
 .page_top {
-    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
 }
 
 
+@media screen and (max-width: 767px) {
+
+    .wrapper {
+        margin-right: 0;
+    }
+
+    .header_logo {
+        width: 187px;
+    }
+
+    .page_top {
+        display: none;
+    }
+
+    .nav_text {
+        display: none;
+    }
+
+}
 
 
 

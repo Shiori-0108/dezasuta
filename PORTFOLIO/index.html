@@ -23,19 +23,21 @@
         <div class="sp_btn"><span></span></div>
         <!-- サイドバー -->
         <p class="nav_text">MENU</p>
-        <nav class="page_top"><a href="#header"><img src="images/pagetop.png" alt="ページトップへ戻る" width="13" height="80">
+        <nav class="page_top"><a href="#header"><img src="images/pagetop.png" alt="ページトップへ戻る" width="13">
             </a> </nav>
     </div>
     <nav class="sp_nav">
         <div class="sp_btn"><span></span></div>
         <ul>
+
             <li><a href="#header">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
+            <li><a href="about/index.html">ABOUT</a></li>
             <li><a href="#service">SERVICE</a></li>
-            <li><a href="#works">WORKS</a></li>
+            <li><a href="works/index.html">WORKS</a></li>
             <li><a href="#contact">CONTACT</a></li>
             <br>
-            <li><a href="#Instagram"><img src="images/instagram.png" alt="instagram" width="35" height="35"></a></li>
+            <li><a href="https://www.instagram.com/__s.design81/"><img src="images/instagram.png" alt="instagram"
+                        width="35" height="35"></a></li>
         </ul>
     </nav>
 
@@ -48,7 +50,12 @@
 
     <div class="wrapper">
         <!-- ヘッダー （上のロゴ以外）-->
-        <h1 class="header_logo"><img src="images/logo@2x.png" alt="S Design" width="100" height="35"></h1>
+        <h1 class="header_logo">
+            <picture>
+                <source srcset="images/logo_sp@2x.png" media="(max-width:767px)"><img src="images/logo@2x.png"
+                    alt="S Design" width="100">
+            </picture>
+        </h1>
         <header id="header" class="header">
 
 
@@ -56,9 +63,11 @@
             <!-- メインビジュアル -->
             <div class="main_visual">
                 <div class="fv">
-                    <img src="images/top_pc@2x-80.jpg" alt="メインビジュアル">
-
-                    <div class="top_title">With all my heart, for you.</div>
+                    <picture>
+                        <source srcset="images/top_sp@2x-80.jpg" media="(max-width:767px)">
+                        <img src="images/top_pc@2x-80.jpg" alt="メインビジュアル">
+                    </picture>
+                    <div class="top_title">With all my heart, <br class="sma">for you.</div>
                 </div>
             </div>
         </header>
@@ -92,7 +101,7 @@
 
             <!-- サービス -->
             <section id="service" class="service">
-                <h2><img src="images/service_pc@2x.png" alt="service" width="184" height="60"></h2>
+                <h2 class="heading"><img src="images/service_pc@2x.png" alt="service" width="184" height="60"></h2>
                 <div class="service_block">
                     <div class="service_menu">
                         <img src="images/design_pc.png" alt="デザイン">
@@ -112,7 +121,7 @@
 
             <!-- ワークス -->
             <section id="works" class="works">
-                <h2><img src="images/works_pc@2x.png" alt="works" width="166" height="60"></h2>
+                <h2 class="heading"><img src="images/works_pc@2x.png" alt="works" width="166" height="60"></h2>
                 <div class="works_block">
                     <div class="top_works">
                         <img src="images/top_works1_pc@2x-80.jpg" alt="portfolio">
@@ -124,26 +133,36 @@
             </section>
 
             <!-- お問い合わせ -->
-            <section id="contact" class="contact">
-                <h2><img src="images/contact_pc@2x.png" alt="contact" width="212" height="60"></h2>
-                <p class="contact_message">あなたのイメージをカタチにするお手伝いをいたします。<br>
-                    お気軽にお問い合わせお待ちしております。</p>
+            <section class="contact">
+                <div class="contact_wrap">
+                    <h2 class="heading"><img src="images/contact_pc@2x.png" alt="contact" width="212" height="60"></h2>
+                    <div class="contact_text">
+                        <div class="contact_message">あなたのイメージを<br class="sma">カタチにするお手伝いをいたします。<br>
+                            お気軽にお問い合わせお待ちしております。</div>
+                    </div>
+
+
+
+                    <form
+                        action="https://docs.google.com/forms/d/e/1FAIpQLSeLYc4cUbOfB4M7kWISHqBaLx7Ia7xOEN-fynxQUMs1NmxT5g/viewform?usp=sf_link">
+                        <div class="form_item">
+                            <label for="name">NAME</label><br>
+                            <input id="name" type="text" name="entry.679763275" class="form_item_input" placeholder="">
+                        </div>
+                        <div class="form_item"><label for="email">ADDRESS</label><br>
+                            <input id="email" type="text" name="entry.145169161" class="form_item_input" placeholder="">
+                        </div>
+                        <div class="form_item">
+                            <label for="msg">MESSAGE</label><br>
+                            <div class="form_item"> <textarea id="msg" name="entry.1768957093"
+                                    class="form_item_textarea" placeholder=""></textarea></div>
+                            <div class="form_item"> <button type="submit" name="button" class="form_btn" value="SEND"
+                                    background="'transparent">SEND</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </section>
-
-
-            <div class="contact_form">
-                <form
-                    action="https://docs.google.com/forms/d/e/1FAIpQLSeLYc4cUbOfB4M7kWISHqBaLx7Ia7xOEN-fynxQUMs1NmxT5g/viewform?usp=sf_link">
-                    <!-- 先生から教えてもらいinputは貼れた、あとはCSSを整える -->
-                    <label for="name">NAME</label>
-                    <input id="name" type="text" name="entry.679763275" placeholder="">
-                    <label for="email">ADDRESS</label>
-                    <input id="email" type="text" name="entry.145169161" placeholder="">
-                    <label for="msg">MESSAGE</label>
-                    <textarea id="msg" name="entry.1768957093" placeholder=""></textarea>
-                    <button type="submit" name="button" value="SEND" background="'transparent">SEND</button>
-                </form>
-            </div>
 
         </main>
 

@@ -43,6 +43,20 @@ img {
     width: 100%;
 }
 
+@media screen and (max-width: 767px) {
+    .top_title {
+        position: absolute;
+        text-align: center;
+        /* あとは位置を調整 */
+        top: 50%;
+        line-height: 1.35;
+        letter-spacing: 0.040em;
+        font-size: 28px;
+        font-family: "homemade-apple-pro", sans-serif;
+        width: 100%;
+    }
+}
+
 
 
 /* アバウト */
@@ -109,26 +123,26 @@ img {
 @media screen and (max-width: 767px) {
 
     .about {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        max-width: 300px;
-        margin: 0 auto;
+        padding-right: 33px;
+        padding-left: 33px;
     }
 
     .about_content {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        /* max-width: 300px; */
+
     }
 
     .about_img {
         width: 100%;
-        height: auto;
+        /* 画像が大きいので修正する */
     }
 
     .about_text {
         text-align: center;
+        width: 100%;
+        margin-top: 20px;
     }
 
     .about p {
@@ -140,13 +154,15 @@ img {
     }
 
     .about_space {
-        padding-top: 30px;
+        padding-top: 20px;
+        margin-bottom: 20px;
     }
 
     .about_btn {
+        margin-top: 28px;
         display: block;
-        width: 260px;
-        height: 48px;
+        width: 200px;
+        height: 35px;
         margin: 0 auto;
         color: white;
         font-family: "yu-gothic", sans-serif;
@@ -155,9 +171,9 @@ img {
         font-size: 16px;
         background-color: #384842;
         text-align: center;
-        line-height: 3;
-        padding: 10px 0;
-        margin-top: 100px;
+        line-height: 1.75;
+        /* padding: 10px 0; */
+
     }
 
 
@@ -201,20 +217,21 @@ img {
 @media screen and (max-width: 767px) {
 
     .service {
-        max-width: 100%;
-        margin: 0 auto;
+        padding-right: 33px;
+        padding-left: 33px;
     }
 
     .service_block {
-        display: flex;
-        flex-direction: column;
-        /* margin: 0 auto; */
+        display: block;
     }
 
     .service_menu {
-        /* position: relative; 不要*/
-        justify-content: flex-start;
-        width: 45%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .service_menu img {
+        width: 100%;
     }
 
     .service_text {
@@ -271,11 +288,6 @@ img {
     margin: 0 30px;
 }
 
-.page_top {
-    position: fixed;
-    right: 60px;
-    bottom: 40px;
-}
 
 .works_btn {
     display: block;
@@ -306,9 +318,9 @@ img {
         flex-direction: column;
     }
 
-    .works img {
+    /* .works img {
         max-width: 100%
-    }
+    } */
 
     .page_top {
         position: fixed;
@@ -344,57 +356,164 @@ img {
     margin: 0 auto;
 }
 
-.contact_message {
-    text-align: center;
+.contact_text {
+    max-width: 500px;
     margin: 0 auto;
+    font-family: "yu-gothic", sans-serif;
     font-size: 14px;
+    line-height: 1.57;
+    /* 22/14で計算 */
+    letter-spacing: 0.060em;
+}
+
+.contact_message {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
     margin-bottom: 45px;
 }
 
-.contact p {
-    font-family: "yu-gothic", sans-serif;
-    font-size: 14px;
-    line-height: 1.4;
-    /* 20/14で計算 */
-    /* font-weight: medium; */
-
-}
-
-/* 
-ここの理解ができておらず、できてないけど解説してもらったので後回し */
-.contact_form {
-    font-family: "yu-gothic", sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
-    font-weight: medium;
-    padding: 10px;
+.contact_wrap {
     display: flex;
     flex-direction: column;
     max-width: 500px;
     margin: 0 auto;
 }
 
-input[type="email"] {
+.contact_wrap p {
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: medium;
+}
+
+.form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+.form_item {
+    padding-bottom: 40px;
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: medium;
+}
+
+
+.form_item_input {
     padding: 10px 20px;
     max-width: 500px;
-    color: #999;
+    border: 1px solid #afb6b3;
+    height: 35px;
+    width: 100%;
+    font-size: 18px;
+}
+
+
+.form_item_textarea {
+    padding: 10px;
+    width: 50%;
+    /* 少し短い、要確認 */
+    height: 230px;
+    font-size: 14px;
     border: 1px solid #afb6b3;
 }
 
-textarea {
-    padding: 10px;
-    height: 100px;
-    color: #999;
-    font-size: 14px;
-    width: 65%;
-    border: 1px solid #999;
+.form_btn {
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 150px;
+    display: block;
+    letter-spacing: 0.1rem;
+    background: #fff;
+    font-size: 12px;
+    border: 1px solid #afb6b3;
 }
 
-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 0 auto;
+
+@media screen and (max-width: 767px) {
+    /* .contact {
+        margin: 0 auto;
+        flex-direction: column;
+        margin: 0 auto;
+    } */
+
+    .contact_text {
+        margin: 0 auto;
+        font-family: "yu-gothic", sans-serif;
+        font-size: 15px;
+        line-height: 1.57;
+        /* 22/14で計算 */
+        letter-spacing: 0.060em;
+    }
+
+    .contact_message {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .contact_wrap {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .contact_wrap p {
+        font-family: "yu-gothic", sans-serif;
+        font-size: 16px;
+        line-height: 1.75;
+        font-weight: medium;
+    }
+
+    .form {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form_item {
+        padding-bottom: 40px;
+        font-family: "yu-gothic", sans-serif;
+        font-size: 16px;
+        line-height: 1.75;
+        font-weight: medium;
+    }
+
+
+    .form_item_input {
+        padding: 10px 20px;
+        border: 1px solid #afb6b3;
+        height: 35px;
+        width: 300px;
+        font-size: 18px;
+    }
+
+
+    .form_item_textarea {
+        padding: 10px;
+        width: 300px;
+        /* SP版も短い、要確認 */
+        height: 230px;
+        font-size: 14px;
+        border: 1px solid #afb6b3;
+    }
+
+    .form_btn {
+        margin: 0 auto;
+        padding: 5px 0;
+        width: 120px;
+        display: block;
+        letter-spacing: 0.1rem;
+        background: #fff;
+        font-size: 12px;
+        border: 1px solid #afb6b3;
+    }
 }
+
+
+
 
 
 
@@ -426,4 +545,34 @@ button {
     font-size: 16px;
     line-height: 1.9;
     /* font-weight: medium; */
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .thanks {
+        margin-top: 110px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .thanks_top p {
+        font-family: "yu-gothic", sans-serif;
+        font-size: 16px;
+        line-height: 1.87;
+        font-weight: bold;
+    }
+
+    .thanks img {
+        width: 110px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .thanks_message p {
+        font-family: "yu-gothic", sans-serif;
+        font-size: 14px;
+        line-height: 1.87;
+        /* font-weight: medium; */
+    }
 }
