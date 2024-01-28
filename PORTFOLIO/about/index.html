@@ -21,17 +21,17 @@
         <div class="sp_btn"><span></span></div>
         <!-- サイドバー -->
         <p class="nav_text">MENU</p>
-        <nav class="page_top"><a href="#header"><img src="../images/pagetop.png" alt="ページトップへ戻る" width="13">
+        <nav class="page_top"><a href="../about/index.html"><img src="../images/pagetop.png" alt="ページトップへ戻る" width="13">
             </a> </nav>
     </div>
     <nav class="sp_nav">
         <div class="sp_btn"><span></span></div>
         <ul>
-            <li><a href="#header">HOME</a></li>
-            <li><a href="about/index.html">ABOUT</a></li>
-            <li><a href="#service">SERVICE</a></li>
-            <li><a href="works/index.html">WORKS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="../index.html#header">HOME</a></li>
+            <li><a href="../about/index.html">ABOUT</a></li>
+            <li><a href="../index.html#service">SERVICE</a></li>
+            <li><a href="../works/index.html">WORKS</a></li>
+            <li><a href="../index.html#contact">CONTACT</a></li>
             <br>
             <li><a href="https://www.instagram.com/__s.design81/"><img src="images/instagram.png" alt="instagram"
                         width="35" height="35"></a></li>
@@ -49,14 +49,19 @@
             </h1>
         </h1>
         <main>
-            <h2 class="heading"><img src="images/about_pc@2x.png" alt="about" width="148" height="60"></h2>
+            <section class="about_top">
+                <h2 class="heading"><img src="images/about_pc@2x.png" alt="about"></h2>
+            </section>
 
             <section id="about_main" class="about_main">
 
                 <div class="about_top">
-                    <img src="images/about_top_pc@2x-80.jpg" alt="about_top">
-                    <p>当ポートフォリオサイトにご訪問いただきありがとうございます。<br>
-                        WEBデザイン・グラフィックデザインを中心に活動中のデザイナーです。<br>
+                    <picture>
+                        <source srcset="images/about_top_sp@2x-80.jpg" media="(max-width:767px)">
+                        <img src="images/about_top_pc@2x-80.jpg" alt="about_top">
+                    </picture>
+                    <p>当ポートフォリオサイトに<br class="sp_only">ご訪問いただきありがとうございます。<br>
+                        WEBデザイン・グラフィックデザインを<br class="sp_only">中心に活動中のデザイナーです。<br>
                         これまでの仕事で培った「提案力」を生かし、<br>
                         持ち前の明るさと「コミュニケーション力」で<br>
                         お客様の想いをカタチにしていきます。<br>
@@ -103,16 +108,17 @@
 
             <!-- ABOUT HISTORY -->
 
+
             <ul class="about_history">
                 <li>
-                    <div>2011</div>
+                    <div><span class="sp_only">●　</span>2011</div>
                     <p>
                         高等学校を卒業後、大学に入学し経済学を学ぶ。<br>
                         人と話すことが好きだったため、お客様と直接コミュニケーションのとれる接客業のアルバイトをいくつか経験。甲子園球場でのアルバイトでは球場内スタッフの接客における優秀賞を4年間で２度受賞！
                     </p>
                 </li>
                 <li>
-                    <div>2014</div>
+                    <div><span class="sp_only">●　</span>2014</div>
                     <p>
 
                         大学卒業後、STARBUCKS　COFFEE JAPANに入社。<br>
@@ -121,7 +127,7 @@
                         実際に店舗で働く中で、仲間を作る、人を育てるという仕事に魅力を感じ、人事の仕事に転職を決意。</p>
                 </li>
                 <li>
-                    <div>2017</div>
+                    <div><span class="sp_only">●　</span>2017</div>
                     <p>
                         技術メーカーに転職、人事の仕事に就く。<br>
                         入社から６年間、採用や研修、出展イベントの企画を担当する。
@@ -130,7 +136,7 @@
                     </p>
                 </li>
                 <li>
-                    <div>2023（NOW）</div>
+                    <div><span class="sp_only">●　</span>2023（NOW）</div>
                     <p>
                         結婚出産を機に、新卒の時から漠然と興味のあったグラフィックデザインについて独学を始める。
                         グラフィックデザインだけでなく、お客様の要望をカタチにし提供することができるようになりたいと思い
@@ -141,13 +147,17 @@
 
             <!-- FAVORITE -->
             <section id="favorite" class="favorite">
-                <h2><img src="images/favorite_pc@2x.png" alt="favorite" width="220" height="60"></h2>
+                <h2 class="heading">
+                    <picture>
+                        <source srcset="images/favorite_sp@2x.png"><img src="images/favorite_pc@2x.png" alt="favorite">
+                    </picture>
+                </h2>
 
-                <div class="favorite_block">
+                <div class=" favorite_block">
                     <div class="favorite_menu">
-                        <img src="images/coffee_pc@2x-80.jpg" alt="coffee">
-                        <img src="images/family_pc@2x-80.jpg" alt="family">
-                        <img src="images/tableware_pc@2x-80.jpg" alt="tableware">
+                        <div class="favorite_item"><img src="images/coffee_pc@2x-80.jpg" alt="coffee"></div>
+                        <div class="favorite_item"><img src="images/family_pc@2x-80.jpg" alt="family"></div>
+                        <div class="favorite_item"><img src="images/tableware_pc@2x-80.jpg" alt="tableware"></div>
                     </div>
                 </div>
             </section>
@@ -157,15 +167,15 @@
         <!-- フッター -->
         <footer id="footer" class="footer">
             <div class="footer_wrap">
-                <img src="images/logo@2x.png" alt="S Design" width="100" height="35">
-                <p class="copyright">©S design All rights reserved.</p>
+                <img src="images/logo@2x.png" alt="S Design">
+                <p>©S design <span class="pc_only">All rights reserved.</span></p>
             </div>
         </footer>
 
     </div>
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

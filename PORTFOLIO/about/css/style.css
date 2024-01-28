@@ -2,19 +2,31 @@
 .about {
     max-width: 1000px;
     margin: 0 auto;
-    /* 謎の隙間の原因解明できず究明中 */
 }
 
 .about_top {
     position: relative;
     max-width: 975px;
     margin: 0 auto;
+    padding: 0 34px;
+}
+
+.about_top .heading {
+    width: 148px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .about_top .heading {
+        margin-top: 120px;
+        width: 85px;
+    }
 }
 
 .about_top p {
     position: absolute;
     /*絶対配置*/
-    color: #333e33;
+    color: #000;
     font-size: 16px;
     font-family: "yu-gothic-pr6n", sans-serif;
     font-weight: normal;
@@ -31,7 +43,7 @@
     box-sizing: border-box;
     opacity: 0.8;
     padding: 8% 10%;
-
+    text-align: center;
 }
 
 .about_all {
@@ -67,9 +79,6 @@
     text-align: start;
 }
 
-.about_top p {
-    text-align: center;
-}
 
 .about_all p {
     font-family: "yu-gothic-pr6n", sans-serif;
@@ -109,9 +118,7 @@
     line-height: 1.75;
 }
 
-@media screen and (max-width: 1000px) {
-
-    /* ここは1000px以下でもうSP版になるようにする（泉先生との面談時） */
+@media screen and (max-width: 767px) {
     .about {
         padding-left: 33px;
         padding-right: 33px;
@@ -121,6 +128,18 @@
         display: block;
         margin: 0 auto;
     }
+
+    .about_img img {
+        width: 61%;
+        /* 230/375で61% */
+        margin: 0 auto;
+        /* これかけると767pxの時は左による、最終的には真ん中に来るけど */
+        /* display: flex;
+        text-align: center;
+        margin-bottom: 10px; */
+    }
+
+    ;
 
     .about_img {
         width: 100%;
@@ -137,9 +156,17 @@
         text-align: center;
     }
 
-    .about_top p {
-        text-align: center;
+    .about_top {
+        margin: 0 34px;
     }
+
+    .about_top p {
+        width: 89%;
+        font-size: 10px;
+        padding: 15px;
+        line-height: 1.4;
+    }
+
 
     .about_all p {
         font-family: "yu-gothic-pr6n", sans-serif;
@@ -167,7 +194,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* このブロックを縦並びにしたい */
     }
 
     .about_skill {
@@ -177,8 +203,8 @@
     }
 
     .skill_menu {
-        /* 縦の線は横の線に変更したい */
         border-top: 1px solid #afb6b3;
+        /* border: 230px; */
         border-left: none;
         padding: 10px;
         line-height: 1.75;
@@ -188,6 +214,7 @@
 
 
 /* ABOUT HISTORY */
+
 ul {
     max-width: 800px;
     margin: 0 auto;
@@ -231,6 +258,7 @@ li>p {
     font-family: "yu-gothic-pr6n", sans-serif;
     line-height: 1.75;
     padding: 25px;
+    text-align: justify;
 }
 
 
@@ -241,10 +269,9 @@ li>p {
 
 
     ul {
-        max-width: 300px;
+        width: 80%;
         margin: 0 auto;
         margin-top: 80px;
-        /* margin-bottom: 110px; */
     }
 
     li {
@@ -255,8 +282,8 @@ li>p {
     li>div {
         position: relative;
         display: flex;
-        align-items: center;
-        padding: 15px;
+        padding-bottom: 0;
+        padding-left: 0;
     }
 
     li>div::after {
@@ -284,25 +311,21 @@ li>p {
         font-size: 16px;
         font-family: "yu-gothic-pr6n", sans-serif;
         line-height: 1.75;
-        padding: 15px;
+        padding: 15px 0;
     }
 }
 
 
 
-
-
-
-
-
 /* FAVORITE */
+
+.favorite .heading {
+    width: 220px;
+}
+
 .favorite h2 {
     padding: 0;
     text-align: center;
-}
-
-.favorite_block {
-    padding-top: 0px;
 }
 
 .favorite_block {
@@ -310,51 +333,45 @@ li>p {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    padding-top: 0px;
 }
 
 .favorite_menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0 40px;
 }
 
-.favorite img {
-    max-width: 33%;
-    margin: 0 30px;
+.favorite_item {
+    width: calc((100% - 60px) / 3);
 }
 
+
+/* .favorite .heading {
+    width: 220px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .favorite .heading {
+        width: 85px;
+    }
+} */
 
 @media screen and (max-width: 767px) {
     .favorite {
+        width: 100%;
         padding-left: 33px;
         padding-right: 33px;
-    }
-
-    .favorite h2 {
-        padding: 0;
-        text-align: center;
-    }
-
-    .favorite_block {
-        padding-top: 0px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .favorite_block {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
+        margin-top: 100px;
     }
 
     .favorite_menu {
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
     }
 
-    .favorite img {
-        max-width: 33%;
-        margin: 0 30px;
+    .favorite_item {
+        width: 100%;
+        margin-top: 25px;
     }
-
 }

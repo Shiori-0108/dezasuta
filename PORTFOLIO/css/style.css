@@ -17,20 +17,6 @@ img {
     border: none;
 }
 
-/*PCでは無効（改行しない）*/
-.sma {
-    display: none;
-}
-
-@media screen and (max-width: 767px) {
-
-    /*スマートフォンでは有効（改行する）*/
-    .sma {
-        display: block;
-    }
-}
-
-
 /* メインビジュアル */
 
 .top_title {
@@ -93,7 +79,7 @@ img {
     font-size: 18px;
     font-family: "yu-gothic-pr6n", sans-serif;
     font-weight: normal;
-    line-height: 1.7;
+    line-height: 1.8;
     letter-spacing: 0.040em;
     /* pxに直すなら18×0.040=o.72px */
 }
@@ -125,24 +111,31 @@ img {
     .about {
         padding-right: 33px;
         padding-left: 33px;
+        padding-top: 10px;
     }
 
     .about_content {
         width: 100%;
         display: flex;
         flex-direction: column;
-
     }
 
     .about_img {
-        width: 100%;
-        /* 画像が大きいので修正する */
+        width: 80%;
+
+        margin: 0 auto;
     }
+
+    /* .about_img img {
+        display: flex;
+        justify-content: center;
+    } */
+
 
     .about_text {
         text-align: center;
         width: 100%;
-        margin-top: 20px;
+        margin: 20px 10px;
     }
 
     .about p {
@@ -210,7 +203,7 @@ img {
     font-size: 16px;
     line-height: 1.9;
     /* font-weight: medium; w3cチェックで引っかかるのでいったんなし*/
-
+    text-align: justify;
 }
 
 
@@ -226,7 +219,7 @@ img {
     }
 
     .service_menu {
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -245,7 +238,7 @@ img {
         font-size: 16px;
         line-height: 1.9;
         /* font-weight: medium; w3cチェックで引っかかるのでいったんなし*/
-
+        text-align: justify;
     }
 
 }
@@ -287,7 +280,6 @@ img {
     max-width: 33%;
     margin: 0 30px;
 }
-
 
 .works_btn {
     display: block;
@@ -406,18 +398,18 @@ img {
     padding: 10px 20px;
     max-width: 500px;
     border: 1px solid #afb6b3;
-    height: 35px;
     width: 100%;
     font-size: 18px;
+    box-sizing: border-box
 }
 
 
 .form_item_textarea {
     padding: 10px;
-    width: 50%;
-    /* 少し短い、要確認 */
+    width: 100%;
     height: 230px;
     font-size: 14px;
+    box-sizing: border-box;
     border: 1px solid #afb6b3;
 }
 
@@ -459,13 +451,13 @@ img {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
+        padding: 0 40px;
     }
 
     .contact_wrap p {
         font-family: "yu-gothic", sans-serif;
         font-size: 16px;
         line-height: 1.75;
-        font-weight: medium;
     }
 
     .form {
@@ -478,25 +470,24 @@ img {
         font-family: "yu-gothic", sans-serif;
         font-size: 16px;
         line-height: 1.75;
-        font-weight: medium;
     }
 
 
     .form_item_input {
+        box-sizing: border-box;
         padding: 10px 20px;
         border: 1px solid #afb6b3;
-        height: 35px;
-        width: 300px;
+        width: 100%;
         font-size: 18px;
     }
 
 
     .form_item_textarea {
         padding: 10px;
-        width: 300px;
-        /* SP版も短い、要確認 */
+        width: 100%;
         height: 230px;
         font-size: 14px;
+        box-sizing: border-box;
         border: 1px solid #afb6b3;
     }
 
@@ -511,8 +502,6 @@ img {
         border: 1px solid #afb6b3;
     }
 }
-
-
 
 
 
@@ -574,5 +563,6 @@ img {
         font-size: 14px;
         line-height: 1.87;
         /* font-weight: medium; */
+
     }
 }

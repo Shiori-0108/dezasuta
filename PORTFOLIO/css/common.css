@@ -59,16 +59,43 @@ img {
 /* 
 リセットCSSここまで */
 
+
+/* 汎用クラス  */
+.sp_only {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .pc_only {
+        display: none;
+    }
+
+    .sp_only {
+        display: block;
+    }
+}
+
+
+
 /* すべて */
 section {
     padding-top: 100px;
 }
 
 .heading {
-    display: flex;
-    justify-content: center;
-    margin-top: 170px;
+    margin: 170px auto 0;
 }
+
+
+
+@media screen and (max-width: 767px) {
+    .heading {
+        margin: 40px auto 0;
+        /* これだとABOUTの詳細ページのタイトル足りず。修正が必要 */
+        /* SP版も文字が左上にいくので修正しないと */
+    }
+}
+
 
 /* ナビゲーションメニュー */
 .nav {
@@ -96,13 +123,9 @@ section {
         background: #384842;
         width: 100%;
         height: 75px;
+        /* z-index: 999; */
+        /* 一番表にこのナビゲーションが来るようにしたいのでこれを消す */
     }
-
-    /* 
-    .header_logo {
-        width: 187px;
-    } */
-
 }
 
 
@@ -116,6 +139,21 @@ section {
     cursor: pointer;
     z-index: 2;
 }
+
+
+@media screen and (max-width: 767px) {
+    .sp_btn {
+        position: fixed;
+        top: 28px;
+        right: 30px;
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+    }
+}
+
+
 
 .sp_btn span {
     position: relative;
@@ -224,7 +262,6 @@ section {
     /* max-width: 100%; */
     padding-top: 30px;
     padding-left: 30px;
-    /* float: left; */
 }
 
 /* .page_top {
@@ -238,6 +275,9 @@ section {
     bottom: 40px;
 }
 
+.footer_wrap {
+    width: 100px;
+}
 
 @media screen and (max-width: 767px) {
 
@@ -246,7 +286,7 @@ section {
     }
 
     .header_logo {
-        width: 187px;
+        width: 100px;
     }
 
     .page_top {
