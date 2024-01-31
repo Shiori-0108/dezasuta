@@ -9,6 +9,7 @@
     max-width: 975px;
     margin: 0 auto;
     padding: 0 34px;
+    /* このpaddingは不要かもしれない 迷ったら消してもいいかもアーカイブ1:28  */
 }
 
 .about_top .heading {
@@ -64,15 +65,21 @@
 }
 
 .about_img {
-    width: 540px;
-    height: auto;
-    display: block;
+    text-align: center;
 }
 
-.about_text {
+/* .about_text {
     width: 300px;
     padding-right: 10px;
     padding-left: 10px;
+    下記に変更
+} */
+
+.about_text {
+    padding-top: 30px;
+    width: 500px;
+    padding-right: 10px;
+    padding-left: 30px;
 }
 
 .about_text p {
@@ -110,6 +117,8 @@
 .about_skill {
     font-size: 16px;
     line-height: 1.75;
+    /* padding: 20px; */
+    /* 線の横の空白もう少し広げたい */
 }
 
 .skill_menu {
@@ -174,6 +183,7 @@
     }
 
     .about_title {
+        margin-top: 20px;
         font-size: 12px;
         line-height: 1.7;
     }
@@ -364,6 +374,7 @@ li>p {
         padding-left: 33px;
         padding-right: 33px;
         margin-top: 100px;
+        box-sizing: border-box;
     }
 
     .favorite_menu {
@@ -374,4 +385,158 @@ li>p {
         width: 100%;
         margin-top: 25px;
     }
+}
+
+
+/* 0129作成中 */
+/* hover */
+.favorite_hover1 .favorite_hover2 .favorite_hover3 {
+    position: relative;
+}
+
+
+.favorite_hover1 .favorite_hover2 .favorite_hover3::before {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+.favorite_hover1:hover::before {
+    content: "Coffee";
+    position: absolute;
+    font-size: 18px;
+    font-family: "yu-gothic", sans-serif;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.favorite_hover2:hover::before {
+    content: "Family";
+    position: absolute;
+    font-size: 18px;
+    font-family: "yu-gothic", sans-serif;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.favorite_honer3:hover::before {
+    content: "Tableware";
+    position: absolute;
+    font-size: 18px;
+    font-family: "yu-gothic", sans-serif;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+
+
+/* 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Avenir', 'Helvetica, Neue', 'Helvetica', 'Arial';
+} */
+
+
+/* モーダルCSS */
+.modalArea {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    /*サイトによってここの数値は調整,一旦10を1にしている */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+.modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 500px;
+    padding: 20px 100px;
+    background-color: #fff;
+}
+
+.closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.modalContents {
+    text-align: center;
+}
+
+.modalContents h1 {
+    padding: 30px 0 20px 0;
+    color: #333e33;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "yu-gothic-pr6n", sans-serif;
+}
+
+.modalContents p {
+    padding: 20px 0;
+    color: #333e33;
+    font-size: 16px;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    line-height: 1.75;
+}
+
+
+
+/* 以下ボタンスタイル */
+button {
+    padding: 5px;
+    background-color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#openModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

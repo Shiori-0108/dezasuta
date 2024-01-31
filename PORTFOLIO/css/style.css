@@ -48,8 +48,9 @@ img {
 /* アバウト */
 .about {
     position: relative;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
+    /* 崩れていたので上の２行省いてみる */
     /* margin-top: 0 100px; */
     max-width: 1000px;
     margin: 0 auto;
@@ -58,9 +59,9 @@ img {
 .about_content {
     display: flex;
     justify-content: space-between;
+    margin-top: 50px;
     max-width: 1000px;
 }
-
 
 .about_img {
     width: 48%;
@@ -71,7 +72,9 @@ img {
 .about_text {
     width: 45%;
     margin-top: 50px;
-    margin: 30px;
+    /* margin: 30px;
+    ボタンが下に見えるのでこれを少し変更してみる */
+    margin: 20px 30px 20px 100px;
     text-align: start;
 }
 
@@ -276,11 +279,6 @@ img {
     justify-content: center;
 }
 
-.works img {
-    max-width: 33%;
-    margin: 0 30px;
-}
-
 .works_btn {
     display: block;
     width: 260px;
@@ -297,6 +295,67 @@ img {
     padding: 10px 0;
     margin-top: 100px;
 }
+
+.slick-slide {
+    margin: 0 30px;
+}
+
+
+
+/* 仮 */
+/* ギャラリー スライダー調整 */
+.dots-class button {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.dots-class {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.dots-class li {
+    width: 14px;
+    height: 14px;
+    background-color: #afb6b3;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: background-color .5s ease;
+}
+
+.dots-class li.slick-active {
+    background-color: #384842;
+}
+
+.dots-class li:hover {
+    background-color: #384842;
+}
+
+.dots-class li:last-child {
+    margin-right: 0;
+}
+
+/* ここからが不明点
+デフォルトのものを無くせない、ドットを写真の下に下ろせない  */
+
+.slick-prev .slick-arrow {
+    display: none;
+
+}
+
+.slick-next .slick-arrow {
+    display: none;
+}
+
+
 
 
 @media screen and (max-width: 767px) {
@@ -415,7 +474,7 @@ img {
 
 .form_btn {
     margin: 0 auto;
-    padding: 5px 0;
+    padding: 10px 0;
     width: 150px;
     display: block;
     letter-spacing: 0.1rem;
@@ -426,11 +485,6 @@ img {
 
 
 @media screen and (max-width: 767px) {
-    /* .contact {
-        margin: 0 auto;
-        flex-direction: column;
-        margin: 0 auto;
-    } */
 
     .contact_text {
         margin: 0 auto;

@@ -21,7 +21,7 @@
         <div class="sp_btn"><span></span></div>
         <!-- サイドバー -->
         <p class="nav_text">MENU</p>
-        <nav class="page_top"><a href="../about/index.html"><img src="../images/pagetop.png" alt="ページトップへ戻る" width="13">
+        <nav class="page_top"><a href="main"><img src="../images/pagetop.png" alt="ページトップへ戻る" width="13">
             </a> </nav>
     </div>
     <nav class="sp_nav">
@@ -33,8 +33,8 @@
             <li><a href="../works/index.html">WORKS</a></li>
             <li><a href="../index.html#contact">CONTACT</a></li>
             <br>
-            <li><a href="https://www.instagram.com/__s.design81/"><img src="images/instagram.png" alt="instagram"
-                        width="35" height="35"></a></li>
+            <li><a href="https://www.instagram.com/__s.design81/" target="_blank"><img src="images/instagram.png"
+                        alt="instagram" width="35" height="35"></a></li>
         </ul>
     </nav>
 
@@ -48,7 +48,7 @@
                 </a>
             </h1>
         </h1>
-        <main>
+        <main id="main">
             <section class="about_top">
                 <h2 class="heading"><img src="images/about_pc@2x.png" alt="about"></h2>
             </section>
@@ -153,11 +153,48 @@
                     </picture>
                 </h2>
 
+                <!-- ベース -->
+                <!-- <div class=" favorite_block">
+                    <div class="favorite_menu">
+                        <div class="favorite_item">
+                            <img src="images/coffee_pc@2x-80.jpg" alt="coffee">
+                        </div>
+
+                        <div class="favorite_item">
+                            <img src="images/family_pc@2x-80.jpg" alt="family">
+                        </div>
+
+                        <div class="favorite_item">
+                            <img src="images/tableware_pc@2x-80.jpg" alt="tableware">
+                        </div>
+
+                    </div>
+                </div>
+            </section> -->
+
+
+
+                <!-- 以下作成中、うまく動かない時はfavorite_hoverを除く -->
                 <div class=" favorite_block">
                     <div class="favorite_menu">
-                        <div class="favorite_item"><img src="images/coffee_pc@2x-80.jpg" alt="coffee"></div>
-                        <div class="favorite_item"><img src="images/family_pc@2x-80.jpg" alt="family"></div>
-                        <div class="favorite_item"><img src="images/tableware_pc@2x-80.jpg" alt="tableware"></div>
+                        <div class="favorite_item">
+                            <button id="openModal1">
+                                <div class="favorite_hover1"><img src="images/coffee_pc@2x-80.jpg" alt="coffee">
+                                </div>
+                            </button>
+                        </div>
+                        <div class="favorite_item">
+                            <button id="openModal2">
+                                <div class="favorite_hover2"><img src="images/family_pc@2x-80.jpg" alt="family">
+                                </div>
+                            </button>
+                        </div>
+                        <div class="favorite_item">
+                            <button id="openModal3">
+                                <div class="favorite_hover3"><img src="images/tableware_pc@2x-80.jpg" alt="tableware">
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -166,16 +203,84 @@
 
         <!-- フッター -->
         <footer id="footer" class="footer">
-            <div class="footer_wrap">
+            <div class="footer_logo">
                 <img src="images/logo@2x.png" alt="S Design">
-                <p>©S design <span class="pc_only">All rights reserved.</span></p>
             </div>
+            <p>©S design <span class="pc_only">All rights reserved.</span></p>
         </footer>
 
     </div>
 
+
+
+    <!-- ここからモーダルウィンドウ -->
+
+    <!-- モーダルエリア1ここから -->
+    <section id="modalArea1" class="modalArea">
+        <div id="modalBg1" class="modalBg"></div>
+        <div class="modalWrapper">
+            <div class="modalContents">
+                <img src="images/coffee_pc@2x-80.jpg" alt="coffee">
+                <h1>Coffee.</h1>
+                <p>３時のおやつの時間がだいすきです。<br>
+                    フードペアリングでこのお菓子に<br>
+                    今日はこのコーヒーにしよう！と<br>
+                    考えるのも楽しいです。
+                </p>
+            </div>
+            <div id="closeModal1" class="closeModal">
+                ×
+            </div>
+        </div>
+    </section>
+    <!-- モーダルエリア1ここまで -->
+
+    <!-- モーダルエリア2ここから -->
+    <section id="modalArea2" class="modalArea">
+        <div id="modalBg2" class="modalBg"></div>
+        <div class="modalWrapper">
+            <div class="modalContents">
+                <img src="images/family_pc@2x-80.jpg" alt="family">
+                <h1>Family.</h1>
+                <p>家族で過ごす時間は、子供が小さい今<br>
+                    大変なこともたくさんありますが<br>
+                    日々の成長を主人と見守れる瞬間が幸せです。
+                </p>
+            </div>
+            <div id="closeModal2" class="closeModal">
+                ×
+            </div>
+        </div>
+    </section>
+    <!-- モーダルエリア2ここまで -->
+
+    <!-- モーダルエリア3ここから -->
+    <section id="modalArea3" class="modalArea">
+        <div id="modalBg3" class="modalBg"></div>
+        <div class="modalWrapper">
+            <div class="modalContents">
+                <img src="images/tableware_pc@2x-80.jpg" alt="tableware">
+                <h1>Tableware.</h1>
+                <p>社会人になった頃から、<br>
+                    いろんなお皿を少しずつ集めています。<br>
+                    お気に入りのお皿があることで<br>
+                    毎日のご飯作りも気合いが入ります！
+                </p>
+            </div>
+            <div id="closeModal3" class="closeModal">
+                ×
+            </div>
+        </div>
+    </section>
+    <!-- モーダルエリア3ここまで -->
+
     <!-- JavaScript -->
     <script src="../js/script.js"></script>
+
+
+    <!-- ↓body閉じタグ直前でjQueryを読み込む -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
 </body>
 
 </html>

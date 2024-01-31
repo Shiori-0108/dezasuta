@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- これより下やってみたもの -->
     <!-- jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
     <!-- slickのJavaScript -->
@@ -42,14 +41,14 @@
     <nav class="sp_nav">
         <div class="sp_btn"><span></span></div>
         <ul>
-            <li><a href="../index.html#header">HOME</a></li>
-            <li><a href="../about/index.html">ABOUT</a></li>
-            <li><a href="../index.html#service">SERVICE</a></li>
-            <li><a href="../works/index.html">WORKS</a></li>
-            <li><a href="../index.html#contact">CONTACT</a></li>
+            <li><a href="./index.html#header">HOME</a></li>
+            <li><a href="./about/index.html">ABOUT</a></li>
+            <li><a href="./index.html#service">SERVICE</a></li>
+            <li><a href="./works/index.html">WORKS</a></li>
+            <li><a href="./index.html#contact">CONTACT</a></li>
             <br>
-            <li><a href="https://www.instagram.com/__s.design81/"><img src="images/instagram.png" alt="instagram"
-                        width="35" height="35"></a></li>
+            <li><a href="https://www.instagram.com/__s.design81/" target="_blank"><img src="images/instagram.png"
+                        alt="instagram" width="35" height="35"></a></li>
         </ul>
     </nav>
 
@@ -82,11 +81,11 @@
             </div>
         </header>
 
-        <!-- アバウト -->
-        <main>
-            <h2 class="heading"><img src="images/about_pc@2x.png" alt="about" width="166" height="60"></h2>
 
+        <main>
+            <!-- アバウト -->
             <section id="about" class="about">
+                <h2 class="heading"><img src="images/about_pc@2x.png" alt="about" width="166" height="60"></h2>
                 <div class="about_content">
                     <div class="about_img">
                         <picture>
@@ -137,21 +136,15 @@
                 <h2 class="heading"><img src="images/works_pc@2x.png" alt="works" width="166" height="60"></h2>
                 <div class="works_block">
                     <div class="top_works">
-                        <img src="images/top_works1_pc@2x-80.jpg" alt="portfolio">
-                        <img src="images/top_works2_pc@2x-80.jpg" alt="life hair salon">
-                        <img src="images/top_works3_pc@2x-80.jpg" alt="design cafe">
+                        <div><img src="images/top_works1_pc@2x-80.jpg" alt="portfolio"></div>
+                        <div><img src="images/top_works2_pc@2x-80.jpg" alt="life hair salon"></div>
+                        <div><img src="images/top_works3_pc@2x-80.jpg" alt="design cafe"></div>
+                        <div><img src="images/top_works4_pc@2x-80.jpg" alt="portfolio"></div>
+                        <div><img src="images/top_works5_pc@2x-80.jpg" alt="life hair salon"></div>
+                        <div><img src="images/top_works6_pc@2x-80.jpg" alt="design cafe"></div>
                     </div>
                 </div>
 
-
-                <!-- カフェサイト参考にやってみたもの     -->
-                <!-- <div class="works_block"> -->
-                <!-- <ul class="gallery_img">
-                        <li><img src="images/top_works1_pc@2x-80.jpg" alt="portfolio"></li>
-                        <li><img src="images/top_works2_pc@2x-80.jpg" alt="life hair salon"></li>
-                        <li><img src="images/top_works3_pc@2x-80.jpg" alt="design cafe"></li>
-                    </ul> -->
-                <!-- </div> -->
                 <a class="works_btn" href="works/index.html">VIEW MORE</a>
             </section>
 
@@ -167,18 +160,22 @@
 
 
                     <form
-                        action="https://docs.google.com/forms/d/e/1FAIpQLSeLYc4cUbOfB4M7kWISHqBaLx7Ia7xOEN-fynxQUMs1NmxT5g/viewform?usp=sf_link">
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeLYc4cUbOfB4M7kWISHqBaLx7Ia7xOEN-fynxQUMs1NmxT5g/formResponse"
+                        method="post" target="hidden_iframe" onsubmit="submitted=true;">
                         <div class="form_item">
                             <label for="name">NAME</label><br>
-                            <input id="name" type="text" name="entry.679763275" class="form_item_input" placeholder="">
+                            <input id="name" type="text" name="entry.679763275" class="form_item_input" placeholder=""
+                                required>
                         </div>
                         <div class="form_item"><label for="email">ADDRESS</label><br>
-                            <input id="email" type="text" name="entry.145169161" class="form_item_input" placeholder="">
+                            <input id="email" type="email" name="entry.145169161" class="form_item_input" placeholder=""
+                                required>
                         </div>
                         <div class="form_item">
                             <label for="msg">MESSAGE</label><br>
                             <div class="form_item"> <textarea id="msg" name="entry.1768957093"
-                                    class="form_item_textarea" placeholder=""></textarea></div>
+                                    class="form_item_textarea" placeholder="" required maxlength="1500"></textarea>
+                            </div>
                             <div class="form_item"> <button type="submit" name="button" class="form_btn" value="SEND"
                                     background="'transparent">SEND</button>
                             </div>
@@ -191,35 +188,46 @@
 
         <!-- フッター -->
         <footer id="footer" class="footer">
-            <div class="footer_wrap">
+            <div class="footer_logo">
                 <img src="images/logo@2x.png" alt="S Design">
-                <p>©S design <span class="pc_only">All rights reserved.</span></p>
             </div>
+            <p>©S design <span class="pc_only">All rights reserved.</span></p>
         </footer>
 
 
     </div>
     <!-- JavaScript -->
-    <script src="js/script.js">
-        // $(function () {
-        //     //ここの中に記述 以下は授業参考
+    <script src="js/script.js"></script>
+    <script>
+        $(function () {
+            //ここの中に記述 以下は授業参考
 
-        //     $('.gallery_img').slick({
-        //         speed: 300,
-        //         slidesToShow: 5,
-        //         slidesToScroll: 1,
-        //         responsive: [
-        //             {
-        //                 breakpoint: 768,
-        //                 settings: {
-        //                     slidesToShow: 1,
-        //                 }
-        //             }
-        //         ]
-        //     });
-        // });
+            $('.top_works').slick({
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                dotsClass: 'dots-class',
+                arrow: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        });
+
 
     </script>
+    <script>
+        var submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted)  {window.location='thanks.html';}">
+    </iframe>
 
 </body>
 

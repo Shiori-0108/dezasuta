@@ -3,7 +3,7 @@
 .works_top {
     max-width: 1000px;
     margin: 0 auto;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .works_top .heading {
@@ -33,18 +33,11 @@
 
 .gallery {
     max-width: 1000px;
-    margin: 0 auto 80px;
-    padding: 0 10px;
+    margin: 0 auto 200px;
+    padding: 0 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 95px 85px;
-}
-
-.gallery div {
-    width: 47%;
-    /* このwidth: 47px;を除くとread moreはうまくかかるも右のサイドバーを無視したデザインになる
-    でもこれをいれるとread moreは縦の長方形になる */
-    padding-bottom: 70px;
+    gap: 9.5% 8.5%;
 }
 
 .gallery_menu {
@@ -69,7 +62,9 @@
     color: #999999;
 }
 
-
+.gallery a:hover {
+    opacity: 1;
+}
 
 
 @media screen and (max-width: 767px) {
@@ -100,7 +95,6 @@
     }
 
     .gallery {
-        width: 100%;
         padding-left: 37px;
         padding-right: 37px;
         margin: 0 auto;
@@ -108,6 +102,11 @@
         flex-direction: column;
     }
 
+    .gallery h3 {
+        font-size: 18px;
+        font-family: "futura-pt", "Noto Sans JP", sans-serif;
+        font-weight: normal;
+    }
 
     .gallery p {
         font-size: 14px;
@@ -115,22 +114,15 @@
         /* イラレ文字間なにもしてないけど大丈夫？確認してイラレも修正 */
     }
 
-    .gallery img {
-        width: 80%;
-        /* 計算式を授業で学んだはず、アーカイブ探す */
+    .gallery li {
+        margin-bottom: 40px;
     }
-
-
-
 }
 
 
 /* hover */
-
 .readmore {
     position: relative;
-    width: 500px;
-    height: 300px;
 }
 
 .readmore::before {
@@ -163,6 +155,7 @@
 
 .detail {
     width: 900px;
+    /* （うまく行かない時はここをmax-widthに変える） */
     margin: 0 auto;
 }
 
@@ -175,7 +168,6 @@
 }
 
 .detail_mv img {
-    /* width: 850px; */
     object-fit: cover;
     box-sizing: border-box;
 }
@@ -311,7 +303,7 @@
         font-style: normal;
         font-size: 20px;
         color: #333e33;
-        margin-top: 70px;
+        margin-top: 50px;
     }
 
     .detail_title p {
