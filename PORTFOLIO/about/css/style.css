@@ -13,14 +13,14 @@
 }
 
 .about_top .heading {
-    width: 148px;
+    width: 150px;
 }
 
 @media screen and (max-width: 767px) {
 
     .about_top .heading {
         margin-top: 120px;
-        width: 85px;
+        /* width: 100px; */
     }
 }
 
@@ -68,19 +68,20 @@
     text-align: center;
 }
 
-/* .about_text {
+.about_text {
     width: 300px;
     padding-right: 10px;
     padding-left: 10px;
-    下記に変更
-} */
+}
 
+/* 
 .about_text {
     padding-top: 30px;
     width: 500px;
     padding-right: 10px;
     padding-left: 30px;
-}
+        テキストを変更したく迷ったもの、残しておく
+} */
 
 .about_text p {
     text-align: start;
@@ -388,18 +389,33 @@ li>p {
 }
 
 
-/* 0129作成中 */
-/* hover */
-.favorite_hover1 .favorite_hover2 .favorite_hover3 {
+/* FAVORITE hover */
+.favorite_hover1 {
     position: relative;
 }
 
+.favorite_hover2 {
+    position: relative;
+}
 
-.favorite_hover1 .favorite_hover2 .favorite_hover3::before {
+.favorite_hover3 {
+    position: relative;
+}
+
+.favorite_hover1::before {
     opacity: 0;
     transition: 0.3s;
 }
 
+.favorite_hover2::before {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.favorite_hover3::before {
+    opacity: 0;
+    transition: 0.3s;
+}
 
 .favorite_hover1:hover::before {
     content: "Coffee";
@@ -437,7 +453,7 @@ li>p {
     transition: 0.3s;
 }
 
-.favorite_honer3:hover::before {
+.favorite_hover3:hover::before {
     content: "Tableware";
     position: absolute;
     font-size: 18px;
@@ -455,16 +471,6 @@ li>p {
     transition: 0.3s;
 }
 
-
-
-/* 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Avenir', 'Helvetica, Neue', 'Helvetica', 'Arial';
-} */
 
 
 /* モーダルCSS */
@@ -498,8 +504,8 @@ body {
 
 .closeModal {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1.5rem;
+    right: 1.5rem;
     cursor: pointer;
 }
 

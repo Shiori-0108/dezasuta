@@ -12,10 +12,10 @@ $(function () {
 
 // モーダルウィンドウ
 $(function () {
-    $('#openModal').click(function(){
+    $('#openModal1').click(function(){
         $('#modalArea').fadeIn();
     });
-    $('#closeModal , #modalBg').click(function(){
+    $('#closeModal1 , #modalBg').click(function(){
       $('#modalArea').fadeOut();
     });
     

@@ -92,8 +92,10 @@ section {
 @media screen and (max-width: 767px) {
     .heading {
         margin: 40px auto 0;
+        /* padding-top: 100px; */
         /* これだとABOUTの詳細ページのタイトル足りず。修正が必要 */
-        /* SP版も文字が左上にいくので修正しないと */
+        /* SP版も文字が左上にいくので修正しないと
+        padding-topを入れて多分解決 */
     }
 }
 

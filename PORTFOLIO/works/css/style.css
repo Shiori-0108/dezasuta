@@ -7,13 +7,13 @@
 }
 
 .works_top .heading {
-    width: 166px;
+    width: 150px;
 }
 
 @media screen and (max-width: 767px) {
 
     .works_top .heading {
-        width: 90px;
+        width: 100px;
         margin: 0 auto;
         padding-top: 20px;
     }
@@ -28,7 +28,8 @@
     font-family: "yu-gothic", sans-serif;
     /* font-weight: medium; */
     line-height: 1.9;
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 80px;
 }
 
 .gallery {

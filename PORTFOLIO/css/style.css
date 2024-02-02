@@ -29,6 +29,64 @@ img {
     width: 100%;
 }
 
+/* ここからやってみたもの */
+/* svgにつけたclass名{
+    width: 100%;
+    height: auto;
+    }
+    #text_svg{
+    fill: #595959;
+    }
+    
+    #text-path{
+    mask: url(#mask-stroke);
+    }
+    #mask_svg{
+    fill: none;
+    stroke: #aedcc0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 14.5;
+    stroke-dasharray: 3350px;
+    stroke-dashoffset: 3350px;
+    animation: writing 5s ease-out infinite;
+    stroke: #ffffff;
+    }
+    
+    @keyframes writing{
+    0%{
+    stroke-dashoffset: 3350px;
+    }
+    100%{
+    stroke-dashoffset: 0px;
+    }
+    }
+
+ */
+
+
+
+
+
+/* .eachTextAnime.appeartext span {
+    animation: text_anime_on 1s ease-out forwards;
+}
+
+.eachTextAnime span {
+    opacity: 0;
+}
+
+.main_visual p {
+    letter-spacing: 0.08em;
+    font-size: 40px;
+    font-family: "homemade-apple-pro", sans-serif;
+    width: 100%;
+} */
+/* ここまで */
+
+
+
+
 @media screen and (max-width: 767px) {
     .top_title {
         position: absolute;
@@ -59,7 +117,7 @@ img {
 .about_content {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 40px;
     max-width: 1000px;
 }
 
@@ -106,8 +164,86 @@ img {
     line-height: 3;
     padding: 10px 0;
     margin-top: 55px;
-    /* ★vertical-align: baseline;これはきっと違うかった */
 }
+
+.about .heading {
+    margin-top: -80px;
+}
+
+
+/* ABOUTもっと見るボタン */
+
+/*表示するテキストが切り替わる*/
+.about_btntextchange {
+    /*テキストの基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .2s;
+    width: 260px;
+    height: 48px;
+    margin: 0 auto;
+    color: white;
+    font-family: "yu-gothic", sans-serif;
+    letter-spacing: 0.06em;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #384842;
+    text-align: center;
+    line-height: 3;
+    padding: 10px 0;
+    margin-top: 55px;
+    margin-left: 60px;
+}
+
+@media screen and (max-width: 767px) {
+    .about_btntextchange {
+        margin-left: 0;
+    }
+}
+
+
+
+/*hoverした際の変化*/
+.about_btntextchange:hover {
+    background: #384842;
+    color: #fff;
+}
+
+.about_btntextchange span {
+    /*絶対配置でテキストの位置を決める*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*アニメーションの指定*/
+    transition: all .5s;
+    /*ブロック要素にしてテキスト折り返しなし*/
+    display: block;
+    white-space: nowrap;
+}
+
+/*差し替わるテキストの設定*/
+.about_btntextchange span:nth-child(2) {
+    opacity: 0;
+    /*透過0に*/
+}
+
+/*hoverするとテキストが入れ替わる設定*/
+.about_btntextchange:hover span:nth-child(1) {
+    opacity: 0;
+    /*透過0に*/
+}
+
+.about_btntextchange:hover span:nth-child(2) {
+    opacity: 1;
+    /*不透明に*/
+}
+
+
 
 @media screen and (max-width: 767px) {
 
@@ -397,6 +533,76 @@ img {
     }
 }
 
+/* WORKSもっと見るボタン */
+
+/*表示するテキストが切り替わる*/
+.works_btntextchange {
+    /*テキストの基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .2s;
+    width: 260px;
+    height: 48px;
+    margin: 0 auto;
+    color: white;
+    font-family: "yu-gothic", sans-serif;
+    letter-spacing: 0.06em;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #384842;
+    text-align: center;
+    line-height: 3;
+    padding: 10px 0;
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .works_btntextchange {
+        margin-left: 0;
+    }
+}
+
+
+
+/*hoverした際の変化*/
+.works_btntextchange:hover {
+    background: #384842;
+    color: #fff;
+}
+
+.works_btntextchange span {
+    /*絶対配置でテキストの位置を決める*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*アニメーションの指定*/
+    transition: all .5s;
+    /*ブロック要素にしてテキスト折り返しなし*/
+    display: block;
+    white-space: nowrap;
+}
+
+/*差し替わるテキストの設定*/
+.works_btntextchange span:nth-child(2) {
+    opacity: 0;
+    /*透過0に*/
+}
+
+/*hoverするとテキストが入れ替わる設定*/
+.works_btntextchange:hover span:nth-child(1) {
+    opacity: 0;
+    /*透過0に*/
+}
+
+.works_btntextchange:hover span:nth-child(2) {
+    opacity: 1;
+    /*不透明に*/
+}
 
 
 
